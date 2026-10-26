@@ -1,0 +1,65 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><element><id>UMLClass</id><coordinates><x>294</x><y>378</y><w>336</w><h>161</h></coordinates><panel_attributes>/Superviviente/
+--
+- codigo : String
+- nombre : String
+- nivel: NivelExperiencia
+- disponible : boolean
+--
++ Superviviente(codigo : String, nombre : String, nivel : NivelExperiencia)
+_# validarNivelExperiencia(nivel : NivelExperiencia) : NivelExperiencia_
++ obtenerCodigo() : String
++ obteneNombre() : String
++ObtenerNivelExperiencia() : NivelExperiencia
++ estaDisponible() : boolean
+/+ calcularAptitud() : int/
++ hashCode() : int
++ equals() : boolean
++toString : String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>707</x><y>252</y><w>392</w><h>91</h></coordinates><panel_attributes>Explorador
+--
+- resistencia : int
+--
+Explorador((codigo : String, nombre : String, nivelExperiencia NivelExperiencia, resistencia : int)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>511</y><w>392</w><h>91</h></coordinates><panel_attributes>Medico
+--
+- conocimientos: int
+--
+Medico((codigo : String, nombre : String, nivelExperiencia NivelExperiencia, conocimientos: int)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>392</y><w>392</w><h>91</h></coordinates><panel_attributes>Constructor
+--
+- habilidadTecnica: int
+--
+Constructor((codigo : String, nombre : String, nivelExperiencia NivelExperiencia, habilidadTecnica: int)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>623</x><y>273</y><w>98</w><h>133</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;170;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>623</x><y>413</y><w>91</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;20;110;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>126</x><y>413</y><w>91</w><h>77</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+NivelExperiencia
+--
++ JUNIOR
++ INTERMEDIO
++ SENIOR</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1239</x><y>476</y><w>112</w><h>49</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/Capacitable/
+--
+/+ capacitarse() : String/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1239</x><y>322</y><w>112</w><h>49</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+/Encargable/
+--
+/+ encargarTarea() : String/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>1092</x><y>273</y><w>161</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>210;80;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>623</x><y>455</y><w>91</w><h>105</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;110;130</additional_attributes></element><element><id>Relation</id><coordinates><x>1085</x><y>357</y><w>168</w><h>84</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>220;10;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>1085</x><y>497</y><w>168</w><h>77</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>220;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>1085</x><y>434</y><w>168</w><h>70</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>220;80;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>378</x><y>133</y><w>245</w><h>126</h></coordinates><panel_attributes>Refugio
+--
+- supervivientes : List
+__- NOMBRE : String__
+--
++ Refugio()
++ agregarSuperviviente(s : Superviviente) : boolean
++ obtenerSupervivientes() : List
++ filtrarPorNivel(nivel : NivelExperiencia) : List
++ obtenerDisponiblesConAptitudMinima(minimo : int) : List</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>455</x><y>252</y><w>35</w><h>140</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=0..*
+m2=1</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>UMLClass</id><coordinates><x>35</x><y>238</y><w>238</w><h>84</h></coordinates><panel_attributes>Validaciones
+--
+
+--
+-Validaciones()
+__ + validarCadena(cadena : String, nombre : String) : String__
+__ + validarPositivo(valor : int, nombre : String) : int__
+__ + validarNoNegativo(valor : int, nombre : String) : int__</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>434</y><w>98</w><h>28</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m2=1</panel_attributes><additional_attributes>10;10;120;10</additional_attributes></element><element><id>Relation</id><coordinates><x>266</x><y>259</y><w>112</w><h>133</h></coordinates><panel_attributes>lt=&lt;.
+m2= 0..*</panel_attributes><additional_attributes>10;10;120;10;120;170</additional_attributes></element></diagram>
